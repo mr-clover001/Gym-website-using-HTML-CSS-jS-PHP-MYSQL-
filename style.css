@@ -1,0 +1,830 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+/* -----------------navbar---------------------------- */
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem 6.5rem;
+  background: #222;
+  z-index: 10000;
+}
+
+.nav h2 {
+  padding-left: 6.5rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.bars i {
+  display: none;
+  color: #ecf0f1;
+  padding-right: 3rem;
+  position: absolute;
+  left: 1.7rem;
+  top: 1.1rem;
+}
+
+.bars i:hover {
+  color: #ff5733;
+  cursor: pointer;
+}
+
+.item {
+  position: relative;
+  top: 7.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.item li {
+  list-style: none;
+  padding-right: 45px;
+}
+
+.item li a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.item li a:hover,
+.item .icon i:hover {
+  color: #ff5733;
+  cursor: pointer;
+}
+.item .icon {
+  padding-left: 30px;
+}
+.item .icon i {
+  color: #fff;
+  padding-right: 30px;
+  font-weight: bolder;
+}
+
+/* ........Responsive part for navbar...................  */
+
+@media (max-width: 1068px) {
+  .nav h2 {
+    padding-left: 5rem;
+    font-size: 1.4rem;
+  }
+
+  .item {
+    display: none;
+    flex-direction: column;
+  }
+
+  #toggle {
+    position: absolute;
+    top: 3.8rem;
+    left: -1.7rem;
+  }
+  #toggle li {
+    padding: 1rem 2rem;
+    list-style: none;
+    border-bottom: 0.1rem solid #666262;
+    background-color: rgb(26, 24, 24);
+  }
+  #toggle li:hover {
+    background-color: rgb(44, 42, 42);
+    color: #ff5733;
+  }
+
+  #toggle li a {
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  #toggle li a:hover {
+    color: #339cff;
+    cursor: pointer;
+  }
+
+  #toggle .icon i {
+    display: none;
+  }
+
+  .bars i {
+    display: block;
+    color: #ecf0f1;
+    padding-right: 1rem;
+  }
+}
+
+/* ............................................. */
+
+/* ------section --------------------------- */
+
+.back {
+  background-image: url(./bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  z-index: -1;
+}
+
+.back .overlay {
+  background: #171819;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mid p {
+  color: #7f8c8d;
+  font-size: 1.3rem;
+  margin-bottom: 1.4rem;
+}
+
+.mid h2 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.mid .btn {
+  margin-top: 2rem;
+}
+
+.mid .btn a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.mid .btn a.simple {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.9rem 1.6rem;
+}
+.mid .btn a.simple:hover {
+  color: #ff5733;
+  cursor: pointer;
+}
+.mid .btn a.another {
+  color: #ff5733;
+  border: 1px solid #ff5733;
+  font-weight: 500;
+  padding: 0.9rem 1.6rem;
+  border-radius: 3px;
+}
+.mid .btn a.another:hover {
+  color: #ff5733;
+  background-color: #fff;
+  border: #fff;
+}
+
+/* ..................responvive code for section 1.............  */
+
+@media (max-width: 1007px) {
+  .mid p {
+    font-size: 1rem;
+  }
+
+  .mid h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 853px) {
+  .mid p {
+    font-size: 0.8rem;
+  }
+
+  .mid h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 668px) {
+  .mid .btn a.simple {
+    font-weight: 400;
+    padding: 0.6rem 1rem;
+  }
+  .mid .btn a.another {
+    font-weight: 400;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* ................................................... */
+
+/* -------------section 2---------------------------------- */
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem 15rem;
+  background: #171819;
+}
+
+.details h3,
+h6,
+h5 {
+  color: #fff;
+}
+
+.details .one {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.details .one h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1.1rem;
+}
+
+.details .one h6 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 1.2rem;
+}
+
+.details .one p {
+  color: #666262;
+  font-size: 1.2rem;
+
+  padding-bottom: 3rem;
+}
+
+.details .one a {
+  color: #fff;
+  background: #f13a11;
+  padding: 1rem 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.details .one a:hover {
+  background: #fff;
+  color: #f13a11;
+  transform: translateY(-6px);
+}
+
+.details .one:active {
+  transform: translateY(-1px);
+}
+
+.details .two {
+  width: 45%;
+
+  border-left: 1px solid #666262;
+  padding-left: 4rem;
+}
+
+.details .two h3 {
+  font-size: 2.5rem;
+}
+
+.details .two h5 {
+  font-size: 1.1rem;
+}
+
+.details .two p {
+  font-size: 1.1rem;
+  color: #666262;
+  margin-bottom: 0.8rem;
+}
+/* .........responsive part of section 2................................ */
+
+@media (max-width: 1302px) {
+  .details .one h3 {
+    font-size: 2rem;
+  }
+
+  .details .one h6 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .details .one p {
+    font-size: 1rem;
+
+    padding-bottom: 3rem;
+  }
+  .details .two h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1158px) {
+  .details .one h3 {
+    font-size: 1.3rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .details .one h6 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-bottom: 0.7rem;
+  }
+
+  .details .one p {
+    font-size: 0.8rem;
+
+    padding-bottom: 3rem;
+  }
+  .details .two h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 962px) {
+  .details .one a {
+    padding: 0.8rem 0;
+    font-size: 0.8rem;
+  }
+  .details {
+    padding: 3rem 7rem;
+  }
+}
+
+/* ......................................................... */
+
+/* -----------section 3----------------------- */
+.trainer {
+  background: #f9f9f9;
+  padding: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trainer .about {
+  width: 39%;
+}
+
+.trainer .about h2 {
+  color: #212529;
+  font-size: 2.1rem;
+  padding-bottom: 1.8rem;
+  font-weight: 800;
+}
+
+.trainer .about p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.trainer .people {
+  width: 57%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trainer .people .team1 {
+  width: 45%;
+  height: auto;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.01),
+    0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02),
+    0 35px 80px rgba(0, 0, 0, 0.03);
+}
+.trainer .people .team1:hover {
+  box-shadow: 10px 10px 5px #868282;
+  transform: translateY(-6px);
+}
+
+.trainer .people .team1:active {
+  transform: translateY(1px);
+}
+
+.trainer .people .team1 .img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.trainer .people .team1 .name,
+.trainer .people .team1 .pro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.trainer .people .team1 .name {
+  padding: 5px 20px 0 20px;
+}
+
+.trainer .people .team1 .teamDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.trainer .people .team1 .name h4 {
+  color: #212529;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.trainer .people .team1 .name i,
+.trainer .people .team1 .pro i {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  cursor: pointer;
+  color: #212529;
+}
+
+.trainer .people .team1 .pro {
+  padding: 5px 20px 0 20px;
+}
+
+.trainer .people .team1 .pro p {
+  color: #212529;
+}
+
+/* ............responsive part of section 3 */
+
+@media (max-width: 1007px) {
+  .trainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trainer .about {
+    width: 100%;
+  }
+  .trainer .about #first-p {
+    padding-bottom: 0;
+  }
+
+  .trainer .about #last-p {
+    padding-bottom: 3rem;
+  }
+
+  .trainer .people .team1 .name h4 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 853px) {
+  .trainer .people {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .trainer .people .team1 {
+    width: 40%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+/* ............................................ */
+
+/* ---section-4---------------------- */
+
+.class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 8rem;
+}
+
+.class .class-line {
+  font-size: 1.3rem;
+  color: #95a5a6;
+  padding-bottom: 6px;
+}
+
+.class .class-head {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.class .classMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.class .classMenu .team1 {
+  width: 32%;
+  height: auto;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out 0s;
+  background: #fff;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.01),
+    0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02),
+    0 35px 80px rgba(0, 0, 0, 0.03);
+}
+
+.class .classMenu .team1:hover {
+  box-shadow: 10px 10px 5px #aaaaaa;
+  transform: translateY(-6px);
+}
+
+.class .classMenu .team1:active {
+  transform: translateY(1px);
+}
+
+.class .classMenu .team1 .img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.class .classMenu .team1 .name,
+.class .classMenu .team1 .pro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.class .classMenu .team1 .teamDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.class .classMenu .team1 .teamDetails .name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px 0 30px;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails h4 {
+  color: #212529;
+  font-size: 1.7rem;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails p {
+  color: #212529;
+  font-size: 1.1rem;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails p span {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.class .classMenu .team1 .teamDetails .name .num h5 {
+  font-size: 1rem;
+  background: #f13a11;
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.class .classMenu .team1 .pro {
+  padding: 15px 30px 30px 30px;
+}
+
+.class .classMenu .team1 .pro p {
+  font-size: 1rem;
+  color: #666262;
+}
+
+/* ...........responsive part of section 4 */
+
+@media (max-width: 1015px) {
+  .class .classMenu .team1 .teamDetails .name .nameDetails h4 {
+    font-size: 1.3rem;
+  }
+
+  .class .classMenu .team1 .teamDetails .name .nameDetails p {
+    font-size: 0.9rem;
+  }
+
+  .class .classMenu .team1 .teamDetails .name .nameDetails p span {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .class .classMenu .team1 .teamDetails .name .num h5 {
+    font-size: 0.8rem;
+    background: #f13a11;
+    width: 3.3rem;
+    height: 3.3rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .class .classMenu .team1 .pro p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1214px) {
+  .class {
+    align-items: center;
+    padding: 2rem 3rem;
+  }
+
+  .class .classMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .class .classMenu .team1 {
+    width: 39%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+/* ------------------------------------------------------ */
+
+/* --section-5  ----Member ----------------------------- */
+
+.member {
+  padding: 4rem 4rem;
+  background: #f9f9f9;
+  border-top: 1px solid #ecf0f1;
+}
+
+.member h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+@media (max-width: 1015px) {
+  .member h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 672px) {
+  .member h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------------------------------------------- */
+
+/* ...........section 6.......................... */
+.contact {
+  border-top: 1px solid #ecf0f1;
+  padding: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.contact .form {
+  width: 45%;
+}
+
+.contact .form h2 {
+  font-size: 2rem;
+  color: #212529;
+  padding-bottom: 10px;
+  width: 100%;
+  font-weight: 700;
+}
+
+.contact .form .submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact .form .submit input,
+.contact .form .submit textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #95a5a6;
+  outline: none;
+  margin: 13px 0;
+}
+
+.contact .form .submit input:focus,
+.contact .form .submit textarea:focus {
+  border: 1px solid #111;
+}
+
+.contact .form .submit input::placeholder {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  height: 80%;
+}
+
+.contact .form .submit a {
+  width: 100%;
+  padding: 15px 0;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+
+.contact .form .submit a:hover {
+  transform: translateY(-6px);
+}
+
+.contact .form .submit a:active {
+  transform: translateY(1px);
+}
+
+.contact .map {
+  width: 45%;
+}
+
+.contact .map h2 {
+  font-size: 2rem;
+  color: #212529;
+  padding-bottom: 10px;
+  width: 100%;
+  font-weight: 700;
+}
+
+.contact .map p {
+  font-size: 1.1rem;
+  color: #212529;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.contact .map p i {
+  color: #af2b0d;
+}
+
+.contact .map iframe {
+  width: 100%;
+}
+
+/* ..........responsive part............... */
+
+@media (max-width: 1115px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact .form {
+    width: 100%;
+  }
+
+  .contact .map {
+    margin-top: 5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1188px) {
+  .contact .form h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ----------------------------------------------- */
+
+.footer {
+  border-top: 2px solid #ecf0f1;
+  padding: 5rem 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  color: #7f8c8d;
+  justify-content: flex-start;
+}
+
+.footer p i {
+  color: #af2b0d;
+  padding-right: 10px;
+}

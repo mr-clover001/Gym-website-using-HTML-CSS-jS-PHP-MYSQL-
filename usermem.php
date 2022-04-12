@@ -11,16 +11,16 @@ mysqli_select_db($con, 'gymuserdata');
 
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+$reason = $_POST['reason'];
+$pnumber = $_POST['Pnumber'];
 $address = $_POST['address'];
 $city = $_POST['city'];
 $state = $_POST['state'];
 
-$query = " insert into userinfodata (fname, lname, email, password, address, city, state) 
-values ('$firstname','$lastname','$email','$password','$address','$city','$state')";
+$query = " insert into usermember (fname, lname, reason, pno, address, city, state) 
+values ('$firstname','$lastname','$reason','$pnumber','$address','$city','$state')";
 
-header("refresh: 0; url = http://localhost:8080/PowerZone%20Gym%20websaite%20(Php)/login.php");
+header("refresh: 0; url = http://localhost:8080/PowerZone%20Gym%20websaite%20(Php)/index.php");
 //  echo "$query";
 mysqli_query($con , $query);
 exit;

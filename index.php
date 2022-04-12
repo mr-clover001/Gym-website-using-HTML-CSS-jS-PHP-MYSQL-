@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+
     <div class="nav" >
-        
         <h2>Power Zone</h2>
         <div class="bars"><i class="fa fa-bars" onclick="toggleFun()"></i></div>
         <ul class="item" id="toggle">
@@ -190,7 +191,7 @@
     <div class="member" id="scrollspySignIn">
        
         <h2>Become a Member of Power Zone</h2>
-        <form class="row g-3" action="userinfo.php" method="post">
+        <form class="row g-3" action="usermem.php" method="post">
             <div class="col-md-6">
                 <label for="inputName" class="form-label">First Name</label>
                 <input type="text" name="firstname" class="form-control" id="inputName">
@@ -199,27 +200,55 @@
                 <label for="inputLastName" class="form-label">Last Name</label>
                 <input type="text" name="lastname" class="form-control" id="inputLastName">
               </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" name="email" class="form-control" id="inputEmail4">
+              <div class="col-md-4">
+              <label for="inputreason" class="form-label">Why you want to join our Gym?</label>
+              <input type="text" name="reason" class="form-control" id="inputReason">
             </div>
+
             <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" id="inputPassword4">
+              <label for="inputPnumber" class="form-label">Phone Number</label>
+              <input type="text" name="Pnumber" class="form-control" id="inputPnumber">
             </div>
+            <br>
+
+          
             <div class="col-12">
-              <label for="inputAddress" class="form-label">Address</label>
-              <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-         
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" name="city" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState" class="form-label">State</label>
-              <input type="text" name="state" class="form-control" id="inputState">
-            </div>
+             <label for="inputAddress" class="form-label">Address</label>
+             <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+           </div>
+        
+           <div class="col-md-6">
+             <label for="inputCity" class="form-label">City</label>
+             <input type="text" name="city" class="form-control" id="inputCity">
+           </div>
+           <div class="col-md-4">
+             <label for="inputState" class="form-label">State</label>
+             <input type="text" name="state" class="form-control" id="inputState">
+           </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">Classes want to join?</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+        Yoga
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+        Aerobics
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+        Cardio
+        </label>
+      </div>
+    </div>
+  </div>
            
             <div class="col-12">
               <button id="member-btn" type="submit" class="btn btn-primary">Sign in</button>

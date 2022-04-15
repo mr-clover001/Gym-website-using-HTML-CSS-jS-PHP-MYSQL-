@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+
+
 $con = mysqli_connect('localhost','root');
 
 // if($con){
@@ -17,6 +21,15 @@ $address = $_POST['address'];
 $city = $_POST['city'];
 $state = $_POST['state'];
 
+$sql = "select * from userinfodata where email='$email' ";
+$result = mysqli_query($con ,$sql);
+$present=mysqli_num_rows($result);
+if($present>0){
+    $_SESSION['email_alert']='1';
+     header("location:createAccount.php");
+
+}else{
+
 $query = " insert into userinfodata (fname, lname, email, password, address, city, state) 
 values ('$firstname','$lastname','$email','$password','$address','$city','$state')";
 
@@ -24,5 +37,7 @@ header("refresh: 0; url = http://localhost:8080/PowerZone%20Gym%20websaite%20(Ph
 //  echo "$query";
 mysqli_query($con , $query);
 exit;
+
+}
 
 ?>

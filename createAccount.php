@@ -1,4 +1,13 @@
+<?php 
 
+session_start();
+
+  $message="";
+  if(isset($_SESSION['email_alert'])){
+    $message = "Email ID Already Exists";
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +20,19 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+<style>
+  .mes{
+    color:red;
+  }
+  </style>
 <body>
-<?php 
-  
- function extra(){
-     echo "go back";
- }
-?>
+
+
 
 <div class="member" id="scrollspySignIn">
        
        <h2>Create your Account</h2>
+       <h4 class="mes"><?php echo $message ?></h4>
        <form class="row g-3" action="userinfo.php" method="post">
            <div class="col-md-6">
                <label for="inputName" class="form-label">First Name</label>
@@ -59,7 +70,8 @@
            </div>
          </form>
    </div>
-
+<?php  unset($_SESSION['email_alert']);
+?>
    </body>
 <script src="./script.js"></script>
 </html>

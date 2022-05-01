@@ -2,8 +2,14 @@
 
 session_start();
 
+$server = "sql102.epizy.com" ;
+$username = "epiz_31634265";
+$password= "ade0uq4rdci";
+$dbname = "epiz_31634265_gymuserdata";
 
-$con = mysqli_connect('localhost','root');
+$con = mysqli_connect($server ,$username, $password, $dbname);
+
+// $con = mysqli_connect('localhost','root');
 
 // if($con){
 //     echo "CONNECTION SUCCESSFULLY";
@@ -33,7 +39,7 @@ if($present>0){
 $query = " insert into userinfodata (fname, lname, email, password, address, city, state) 
 values ('$firstname','$lastname','$email','$password','$address','$city','$state')";
 
-header("refresh: 0; url = http://localhost:8080/PowerZone%20Gym%20websaite%20(Php)/login.php");
+header("refresh: 0; url = http://powerzoneofficialgym.epizy.com/");
 //  echo "$query";
 mysqli_query($con , $query);
 exit;

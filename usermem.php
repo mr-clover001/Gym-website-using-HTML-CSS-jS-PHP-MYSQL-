@@ -1,5 +1,13 @@
 <?php
-$con = mysqli_connect('localhost','root');
+$server = "sql102.epizy.com" ;
+$username = "epiz_31634265";
+$password= "ade0uq4rdci";
+$dbname = "epiz_31634265_gymuserdata";
+
+$con = mysqli_connect($server ,$username, $password, $dbname);
+
+
+// $con = mysqli_connect('localhost','root');
 
 // if($con){
 //     echo "CONNECTION SUCCESSFULLY";
@@ -20,7 +28,7 @@ $state = $_POST['state'];
 $query = " insert into usermember (fname, lname, reason, pno, address, city, state) 
 values ('$firstname','$lastname','$reason','$pnumber','$address','$city','$state')";
 
-header("refresh: 0; url = http://localhost:8080/PowerZone%20Gym%20websaite%20(Php)/index.php");
+header("refresh: 0; url = http://powerzoneofficialgym.epizy.com/");
 //  echo "$query";
 mysqli_query($con , $query);
 exit;
